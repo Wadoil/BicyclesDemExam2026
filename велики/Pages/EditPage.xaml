@@ -1,0 +1,58 @@
+﻿<Page x:Class="велики.Pages.EditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:велики.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditPage">
+    <ScrollViewer>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="Category:"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Text="Name:"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Text="Description:" TextWrapping="Wrap"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Text="Producer:"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" Text="Supplier:"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5" Text="Cost:"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="6" Text="Measurement:"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="7" Text="Amount:"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="8" Text="Discount:"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="9" Text="Article:"/>
+        <Image Name="ImageBox" Grid.Column="2" Grid.RowSpan="9"/>
+
+        <ComboBox Grid.Column="1" Margin="10" Name="CategoryBox"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="10" Name="NameBox"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="10" Name="DescriptionBox"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" Margin="10" Name="ProducerBox"/>
+        <ComboBox Grid.Row="4" Grid.Column="1" Margin="10" Name="SupplierBox"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Margin="10" Name="CostBox"/>
+        <ComboBox Grid.Row="6" Grid.Column="1" Margin="10" Name="MeasurementBox"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Margin="10" Name="AmountBox"/>
+        <TextBox Grid.Row="8" Grid.Column="1" Margin="10" Name="DiscountBox"/>
+        <TextBox Grid.Row="9" Grid.Column="1" Margin="10" Name="ArticleBox"/>
+        
+        <Button Grid.Column="0" Grid.Row="10" Margin="5" HorizontalAlignment="Left" Content=" Delete " Background="Red" Click="DeleteBtn_Click"/>
+        <Button Grid.Column="1" Grid.Row="10" Margin="5" Content="Cancel" Background="{StaticResource Accent}" Click="CancelBtn_Click"/>
+        <Button Grid.Column="2" Grid.Row="10" Margin="5" Content="Save" Background="{StaticResource AdditionalBg}" Click="SaveBtn_Click"/>
+    </Grid>
+    </ScrollViewer>
+</Page>
